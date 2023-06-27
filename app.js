@@ -1,11 +1,11 @@
 const express = require("express")
 const bodyParser = require("body-parser")
 
-// import { Express } from "express"
-// import bodyParser from "body-parser";
 
 
 const app = express()
+
+app.use('view engine', 'ejs');
 
 app.get('/', function(req, res){
   let today = new Date()
@@ -13,9 +13,9 @@ app.get('/', function(req, res){
 
 
   if (currentDay == 6 || currentDay == 0) {
-    res.send("yay it's the weekend!")
+    res.write("<h1>yay it's the weekend!</h1>")
   } else {
-    res.send("Boo! I have to work")
+    res.sendFile(__dirname + "/index.html")
   }
 })
 
