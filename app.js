@@ -5,19 +5,36 @@ const bodyParser = require("body-parser")
 
 const app = express()
 
-app.use('view engine', 'ejs');
+app.set('view engine', 'ejs');
 
 app.get('/', function(req, res){
   let today = new Date()
   let currentDay = today.getDay()
+  let day = ""
 
 
-  if (currentDay == 6 || currentDay == 0) {
-    res.write("<h1>yay it's the weekend!</h1>")
-  } else {
-    res.sendFile(__dirname + "/index.html")
-  }
-})
+  if (currentDay == 0 ) {
+    day = "Sunday"
+    res.render("list", {kindOfDay: day })
+  } else if (currentDay == 1) {
+    day = "Monday"
+    res.render("list", {kindOfDay: day })
+  } else if (currentDay == 2) {
+    day = "Tuesday"
+    res.render("list", {kindOfDay: day })
+  } else if (currentDay == 3) {
+    day = "Wednesday"
+    res.render("list", {kindOfDay: day })
+  } else if (currentDay == 4) {
+    day = "Thursday"
+    res.render("list", {kindOfDay: day })
+  } else if (currentDay == 5) {
+    day = "Friday"
+    res.render("list", {kindOfDay: day })
+  } else if (currentDay == 6) {
+    day = "Saturday"
+    res.render("list", {kindOfDay: day })
+  }})
 
 
 app.listen(3000, function(){
