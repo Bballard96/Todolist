@@ -1,11 +1,22 @@
-import { Express } from "express";
-import bodyParser from "body-parser";
+const express = require("express")
+const bodyParser = require("body-parser")
+
+// import { Express } from "express"
+// import bodyParser from "body-parser";
 
 
-const app = Express()
+const app = express()
 
 app.get('/', function(req, res){
-  res.send('Hello')
+  let today = new Date()
+  let currentDay = today.getDay()
+
+
+  if (currentDay == 6 || currentDay == 0) {
+    res.send("yay it's the weekend!")
+  } else {
+    res.send("Boo! I have to work")
+  }
 })
 
 
