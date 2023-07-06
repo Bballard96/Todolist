@@ -94,3 +94,19 @@ footer {
   color: rgba(0, 0, 0, 0.5);
   text-align: center;
 }
+
+#switch-button {
+  height: 100px;
+  width: 400px;
+  /* border-radius: 50%; */
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+#switch-button:hover {
+  background-color: #8061b5;
+}
