@@ -42,6 +42,13 @@ if (req.body.list === "Work") {
     res.render('about')
   })
 
+  app.post('/', function(req, res) {
+    res.redirect('list')
+  })
+  app.post('/work', function(req, res) {
+    res.redirect('work')
+  })
+
 app.listen(3000, function(){
   console.log("Server started on port 3000")
 })
