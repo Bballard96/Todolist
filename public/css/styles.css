@@ -47,7 +47,7 @@ p {
   margin: 0;
   padding: 20px;
   font-size: 20px;
-  font-weight: 200;
+  font-weight: 400;
   color: #00204a;
 }
 
@@ -98,14 +98,13 @@ footer {
 #switch-button {
   height: 100px;
   width: 400px;
-  /* border-radius: 50%; */
   border-color: transparent;
   background-color: #A683E3;
   color: #fff;
   font-size: 30px;
   padding-bottom: 6px;
   border-width: 0;
-  box-shadow: 1px 8px 8px 1px black ;
+  box-shadow: 1px 6px 8px 1px black ;
 }
 
 #switch-button:hover {
